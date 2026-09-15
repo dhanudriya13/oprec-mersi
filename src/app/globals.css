@@ -1,0 +1,606 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   MERSI SIFORS UNDIKSHA — Design tokens
+   --------------------------------------------------------------------------
+   Brand palette: LIGHT GOLD on WHITE.
+
+   ⚠️  PLACEHOLDER BRANDING
+   Official SIFORS / Undiksha brand colours have NOT been supplied, so the
+   values below are a starting palette. Per `prd.md` section 18 these tokens are
+   the single source of truth — swap the values (only the values) once the
+   official palette is provided.
+
+   Contrast note: light gold is a pale hue, so it is split into five roles.
+     --color-primary          light gold SURFACES (buttons, bands, gold-washed
+                              section backgrounds), always paired with dark
+                              --color-primary-contrast text
+     --color-primary-edge     a deeper gold used as a 1px outline / hover
+                              border, so light gold buttons stay defined
+     --color-primary-display  deeper gold for LARGE display headings, where
+                              WCAG allows a 3:1 ratio
+     --color-primary-ink      gold TEXT/ICONS on white, darkened to meet
+                              WCAG AA for normal text (5.1:1)
+     --color-primary-soft     a barely-there gold wash for icon chips
+   Keep all five in sync if the gold changes.
+   ========================================================================== */
+
+@theme {
+  /* Brand — light gold */
+  --color-primary: #e5c363; /* main light gold surface */
+  --color-primary-hover: #dab54e;
+  --color-primary-edge: #b08a1e; /* outline gold (3.2:1 vs white) */
+  --color-primary-display: #b08a1e; /* gold for LARGE display text only (3.2:1) */
+  --color-primary-soft: #fdf8e6; /* pale gold wash */
+  --color-primary-ink: #8a6a11; /* gold text on white — AA, 5.1:1 */
+  --color-primary-contrast: #1f1804; /* text placed on light gold */
+
+  --color-secondary: #3f3a2c;
+  --color-secondary-soft: #f3f1ea;
+  --color-accent: #6b5c2e;
+  --color-accent-soft: #f7f2e2;
+
+  /* Surfaces — white, with warm neutrals for depth */
+  --color-background: #ffffff;
+  --color-surface: #faf9f5;
+  --color-surface-raised: #ffffff;
+  --color-text: #1a1608;
+  --color-muted: #6a6350;
+  --color-border: #ece8dd;
+
+  /* Status */
+  --color-success: #15803d;
+  --color-success-soft: #e9f6ec;
+  --color-warning: #c2410c;
+  --color-warning-soft: #fdece2;
+  --color-neutral-soft: #f2efe6;
+
+  /* Radius scale — rounded, friendly, modern */
+  --radius-card: 1.25rem;
+
+  /* Typography scale (fluid where it matters) */
+  --text-display: clamp(2.75rem, 7vw, 5rem);
+  --text-display--line-height: 1.03;
+  --text-display--letter-spacing: -0.03em;
+
+  --text-h1: clamp(2.25rem, 5vw, 3.25rem);
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.025em;
+
+  --text-h2: clamp(1.75rem, 3.4vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.02em;
+
+  --text-h3: clamp(1.125rem, 1.6vw, 1.375rem);
+  --text-h3--line-height: 1.3;
+  --text-h3--letter-spacing: -0.01em;
+
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+
+  /* Motion — see the "Motion" section further down for the matching
+     keyframes. Everything is CSS-only: no animation library, no extra
+     JavaScript, and every one of these utilities is switched off inside
+     `prefers-reduced-motion` at the bottom of this file. */
+  --animate-rise: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-pop: pop 0.55s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 12s ease-in-out infinite;
+  --animate-drift: drift 26s ease-in-out infinite alternate;
+  --animate-bob: bob 2.4s ease-in-out infinite;
+  --animate-nudge: nudge 2.6s ease-in-out infinite;
+  --animate-pulse-soft: pulse-soft 3.6s ease-in-out infinite;
+}
+
+/* Font family is injected by `next/font` in `app/layout.tsx`. */
+@theme inline {
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* ==========================================================================
+   Motion
+   --------------------------------------------------------------------------
+   Two rules keep this predictable:
+     1. Every keyframe lives here, at the top level, so the class-based
+        effects below (card spotlight, CTA shimmer, ticker) can rely on them.
+     2. Timing uses one shared easing curve, so unrelated animations still
+        feel like they belong to the same website.
+   ========================================================================== */
+:root {
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-snap: cubic-bezier(0.34, 1.4, 0.64, 1);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.55em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Plays on the seconds block each time it changes, so the countdown reads as
+   a live element rather than a static number. */
+@keyframes tick {
+  0% {
+    opacity: 0.35;
+    transform: translateY(-6px) scale(0.92);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(1px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* `transform` only — these run behind text, so they must never trigger layout. */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -14px, 0) scale(1.03);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-1.6%, 1.4%, 0) scale(1.05);
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* Light sweeping across the primary CTA, with a long pause in between sweeps
+   so it reads as a highlight rather than a blinking distraction. */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-160%) skewX(-18deg);
+  }
+  45%,
+  100% {
+    transform: translateX(320%) skewX(-18deg);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes shine {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Theme note
+   --------------------------------------------------------------------------
+   The site ships a single light theme — a white background with gold accents,
+   as specified. Because every colour is a token (`bg-background`,
+   `text-muted`, …), adding a dark theme later only requires re-declaring the
+   tokens on a `.dark` selector or inside a `prefers-color-scheme` media query
+   here. No component needs to change.
+   ========================================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keeps anchored sections clear of the sticky navbar. */
+    scroll-padding-top: 5.5rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Visible, consistent keyboard focus everywhere. */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+  }
+
+  /* Values such as [APPLICATION URL] must read as "pending data", never as
+     real content. */
+  .placeholder-token {
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.04em;
+    color: var(--color-muted);
+    background-color: var(--color-neutral-soft);
+    border: 1px dashed var(--color-border);
+    border-radius: 0.4rem;
+    padding: 0.05em 0.4em;
+    white-space: nowrap;
+  }
+}
+
+@layer components {
+  /* Horizontal page gutter — every section uses this for consistent rhythm. */
+  .shell {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .shell {
+      padding-inline: 1.75rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .shell {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* Decorative "digital" backdrop — CSS only, no images to download.
+     The gold wash is mixed at a higher percentage because the brand gold is
+     deliberately pale. */
+  .grid-backdrop {
+    background-image:
+      radial-gradient(
+        ellipse 70% 55% at 50% -10%,
+        color-mix(in oklab, var(--color-primary) 55%, transparent),
+        transparent 70%
+      ),
+      linear-gradient(
+        to right,
+        color-mix(in oklab, var(--color-border) 70%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--color-border) 70%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 100% 100%, 3.5rem 3.5rem, 3.5rem 3.5rem;
+    mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+  }
+
+  /* Scroll reveal (see components/ui/Reveal.tsx).
+     Content is visible by default; the hidden state is only applied once the
+     component has confirmed — client-side — that JavaScript is running and the
+     element is below the fold. Without JavaScript nothing is ever hidden.
+
+     The `data-variant` variants let a section choose the direction it moves
+     in, so a column of cards rises while a side panel slides in from the
+     side. */
+  .reveal[data-armed="true"] {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.75s var(--ease-soft),
+      transform 0.75s var(--ease-soft);
+  }
+
+  .reveal[data-variant="fade"][data-armed="true"] {
+    transform: none;
+  }
+
+  .reveal[data-variant="left"][data-armed="true"] {
+    transform: translateX(-26px);
+  }
+
+  .reveal[data-variant="right"][data-armed="true"] {
+    transform: translateX(26px);
+  }
+
+  .reveal[data-variant="scale"][data-armed="true"] {
+    transform: translateY(14px) scale(0.955);
+  }
+
+  .reveal[data-armed="true"][data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Elements that "draw themselves" the first time their Reveal wrapper
+     becomes visible — the rule under a section heading, the vertical timeline
+     connector. Their default state is the finished state, so they are never
+     missing for visitors without JavaScript. */
+  .draw-x,
+  .draw-center,
+  .draw-y {
+    transition: transform 0.9s var(--ease-soft) 0.2s;
+  }
+
+  .draw-x {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+
+  .draw-center {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+  .draw-y {
+    transform: scaleY(1);
+    transform-origin: top center;
+  }
+
+  [data-armed="true"] .draw-x,
+  [data-armed="true"] .draw-center {
+    transform: scaleX(0);
+  }
+
+  [data-armed="true"] .draw-y {
+    transform: scaleY(0);
+  }
+
+  [data-armed="true"][data-visible="true"] .draw-x,
+  [data-armed="true"][data-visible="true"] .draw-center {
+    transform: scaleX(1);
+  }
+
+  [data-armed="true"][data-visible="true"] .draw-y {
+    transform: scaleY(1);
+  }
+
+  /* Reading-progress bar (see components/layout/Navbar.tsx).
+     Starts collapsed here rather than in an inline style, so the server-rendered
+     markup already shows an empty bar; the scroll handler then writes a
+     `transform` directly onto the element, which is why scrolling the page
+     never triggers a React render. */
+  .progress-bar {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  /* Pointer-tracked highlight for cards.
+     The coordinates are written to custom properties by one delegated
+     listener (components/ui/SpotlightTracker.tsx), so a card needs no event
+     handler, no state, and no client boundary of its own. */
+  .card-spotlight::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(
+      17rem 17rem at var(--spotlight-x, 50%) var(--spotlight-y, 0%),
+      color-mix(in oklab, var(--color-primary) 24%, transparent),
+      transparent 72%
+    );
+  }
+
+  .card-spotlight:hover::after,
+  .card-spotlight:focus-within::after {
+    opacity: 1;
+  }
+
+  /* A single, slow highlight sweep across the primary call to action.
+     `isolation: isolate` + `z-index: -1` keep the sweep *behind* the label:
+     it lights up the surface without ever washing over the text. The tint is a
+     variable so the same sweep also works on the light button that sits on the
+     gold band. */
+  .btn-shimmer {
+    --shimmer-color: color-mix(in oklab, white 60%, transparent);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .btn-shimmer-gold {
+    --shimmer-color: color-mix(in oklab, var(--color-primary) 70%, transparent);
+  }
+
+  .btn-shimmer::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -25%;
+    bottom: -25%;
+    left: 0;
+    width: 45%;
+    pointer-events: none;
+    background: linear-gradient(
+      100deg,
+      transparent,
+      var(--shimmer-color),
+      transparent
+    );
+    animation: shimmer 6.5s var(--ease-soft) infinite;
+  }
+
+  /* Gradient sweep across a single display word (the hero accent).
+     Both stops are accessible golds — gold ink (5.1:1) and gold display
+     (3.2:1) — so the word stays legible at every point of the sweep, rather
+     than flashing a pale gold that would drop below the large-text threshold. */
+  .text-shine {
+    background-image: linear-gradient(
+      100deg,
+      var(--color-primary-ink) 0%,
+      var(--color-primary-ink) 36%,
+      var(--color-primary-display) 50%,
+      var(--color-primary-ink) 64%,
+      var(--color-primary-ink) 100%
+    );
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 7.5s ease-in-out infinite;
+  }
+
+  /* The countdown digits are decorative-but-live: each tick pops in. */
+  .countdown-digit {
+    animation: tick 0.55s var(--ease-soft);
+  }
+
+  /* Ticker band: the track holds the list twice, so translating it by exactly
+     half its width loops seamlessly. */
+  .marquee-track {
+    width: max-content;
+    animation: marquee 42s linear infinite;
+  }
+
+  .marquee-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 8%,
+      #000 92%,
+      transparent
+    );
+  }
+
+  /* FAQ answers animate open. `<details>` hides its content with
+     `display: none`, and an animation starts as soon as the element is
+     rendered again, so no JavaScript accordion is needed. */
+  details[open] .faq-answer {
+    animation: faq-open 0.4s var(--ease-soft) both;
+  }
+}
+
+/* ==========================================================================
+   Motion preferences (PRD section 21)
+   --------------------------------------------------------------------------
+   Everything above is decorative, so it can all be switched off: animations
+   collapse to their end state, transitions become instant, and the few
+   elements that are *translated* by an animation (rather than merely faded)
+   reset to their natural position.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .draw-x,
+  .draw-center,
+  .draw-y,
+  .marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .card-spotlight::after,
+  .btn-shimmer::after {
+    display: none;
+  }
+
+  .text-shine {
+    animation: none !important;
+    background: none !important;
+    color: var(--color-primary-display) !important;
+  }
+}
