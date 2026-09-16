@@ -12,8 +12,8 @@ interface RecruitmentStatusPillProps {
 /**
  * Renders the current recruitment state (PRD section 13).
  *
- * The state is communicated three ways — emoji (🟢 🟡 ⚪), a dot, and the
- * written label — so it never depends on colour alone.
+ * The state is communicated three ways , emoji (🟢 🟡 ⚪), a dot, and the
+ * written label , so it never depends on colour alone.
  */
 export function RecruitmentStatusPill({
   className,

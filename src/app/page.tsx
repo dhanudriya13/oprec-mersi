@@ -16,7 +16,7 @@ import { site } from "@/data/site";
 
 export default function HomePage() {
   /**
-   * Organization structured data. Nothing here is invented — the name, the
+   * Organization structured data. Nothing here is invented , the name, the
    * programme, and the tagline all come from the project brief.
    */
   const structuredData = {

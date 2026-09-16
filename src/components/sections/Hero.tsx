@@ -25,7 +25,7 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="relative overflow-hidden pt-30 pb-20 sm:pt-34 lg:pt-38 lg:pb-28"
     >
-      {/* Decorative backdrop — pure CSS, nothing to download. */}
+      {/* Decorative backdrop , pure CSS, nothing to download. */}
       <div
         className="grid-backdrop animate-drift pointer-events-none absolute inset-x-0 top-0 h-[46rem]"
         aria-hidden="true"
@@ -186,7 +186,7 @@ export function Hero() {
         </Reveal>
       </div>
 
-      {/* Scroll cue — decorative only. Keyboard and screen-reader users reach
+      {/* Scroll cue , decorative only. Keyboard and screen-reader users reach
           the next section through the real links above, so this is hidden from
           assistive technology. */}
       <div

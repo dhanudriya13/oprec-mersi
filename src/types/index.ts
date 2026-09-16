@@ -101,9 +101,9 @@ export interface RecruitmentProcessStep {
 /**
  * Official recruitment contact person.
  *
- * `whatsapp` holds the number in its display form (`+62 …`) or `null` while it
- * is still unknown — `getWhatsAppUrl()` converts it into a `wa.me` link and the
- * UI hides the WhatsApp button when it cannot.
+ * `whatsapp` holds the number in its display form or `null` while it is still
+ * unknown , `getWhatsAppUrl()` converts it into a `wa.me` link and the UI
+ * hides the WhatsApp button when it cannot.
  */
 export interface RecruitmentContact {
   name: string;

@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
  * This module deliberately ships **no third-party scripts, no cookies and no
  * fingerprinting**. It forwards events to a single integration point:
  *
- *  1. `window.dataLayer` — if Google Tag Manager (or any compatible tag) is
+ *  1. `window.dataLayer` , if Google Tag Manager (or any compatible tag) is
  *     loaded later, the events are already there waiting.
  *  2. A `mersi:analytics` CustomEvent on `window`, so a privacy-friendly
  *     provider (Plausible, Umami, Vercel Analytics, …) can be wired up by

@@ -24,13 +24,13 @@ export const faqItems: FaqItem[] = [
     id: "multiple-teams",
     question: "Can I apply for multiple teams?",
     answer:
-      "No. Each applicant can apply for one team only: Copywriting, Creative Design, or QA/QC. Please choose the team that best matches your interests, skills, and strengths. Don't worry if you're still developing your skills — we value your willingness to learn and contribute as part of the MERSI team. ✨",
+      "No. Each applicant can apply for one team only: Copywriting, Creative Design, or Social Media Talent. Please choose the team that best matches your interests, skills, and strengths. Don't worry if you're still developing your skills , we value your willingness to learn and contribute as part of the MERSI team. ✨",
   },
   {
     id: "what-will-i-do",
     question: "What will I do if I join?",
     answer:
-      "It depends on the team you join. Copywriting develops captions, campaign copy, concepts, and scripts. Creative Design turns those ideas into social media graphics, carousels, posters, and infographics. QA/QC reviews every piece before publication to make sure the facts, grammar, branding, and links are correct.",
+      "It depends on the team you join. Copywriting develops captions, campaign copy, concepts, and scripts. Creative Design turns those ideas into social media graphics, carousels, posters, and infographics. Social Media Talent brings MERSI's content to life by appearing in videos, Reels, and other social media content.",
   },
   {
     id: "time-commitment",

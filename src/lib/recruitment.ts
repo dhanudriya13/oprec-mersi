@@ -35,8 +35,8 @@ export function getRecruitmentState() {
 /**
  * Turns the official contact number (`+62 877-…`) into a `wa.me` chat link.
  *
- * Returns `null` when no usable number has been configured — empty, still a
- * `[CONTACT PERSON]` placeholder, or too few digits — so the UI omits the
+ * Returns `null` when no usable number has been configured , empty, still a
+ * `[CONTACT PERSON]` placeholder, or too few digits , so the UI omits the
  * WhatsApp button instead of linking to a chat that cannot open.
  */
 export function getWhatsAppUrl(

@@ -1,6 +1,6 @@
 
 
-# PRD — MERSI SIFORS UNDIKSHA Website
+# PRD , MERSI SIFORS UNDIKSHA Website
 
 **Product:** MERSI SIFORS UNDIKSHA
 **Product Type:** Student PR & Recruitment Website
@@ -19,13 +19,13 @@
 
 MERSI SIFORS UNDIKSHA is a student PR/creative team associated with the **Information Systems Study Programme (SIFORS)**.
 
-The team supports the study programme's communication and student recruitment activities through creative content, visual communication, and quality assurance.
+The team supports the study programme's communication and student recruitment activities through creative content, visual communication, and social media content.
 
 MERSI consists of three primary teams:
 
 1. **Copywriting**
 2. **Creative Design**
-3. **QA/QC**
+3. **Social Media Talent**
 
 The website will serve as the official digital landing page for MERSI, introducing its identity, activities, team structure, recruitment opportunities, and application process.
 
@@ -35,7 +35,7 @@ The website will serve as the official digital landing page for MERSI, introduci
 
 The website should accomplish five primary goals.
 
-### G1 — Introduce MERSI
+### G1 , Introduce MERSI
 
 Visitors should quickly understand:
 
@@ -44,19 +44,19 @@ Visitors should quickly understand:
 * Why MERSI exists
 * Its relationship with SIFORS Undiksha
 
-### G2 — Attract Students
+### G2 , Attract Students
 
 The website should make students interested in becoming part of MERSI.
 
-### G3 — Explain Available Roles
+### G3 , Explain Available Roles
 
 Students should clearly understand the three teams:
 
 * Copywriting
 * Creative Design
-* QA/QC
+* Social Media Talent
 
-### G4 — Convert Visitors Into Applicants
+### G4 , Convert Visitors Into Applicants
 
 The website should make applying extremely easy.
 
@@ -64,7 +64,7 @@ The primary conversion should be:
 
 > **Visitor → Understand MERSI → Interested → Apply**
 
-### G5 — Establish a Professional Digital Identity
+### G5 , Establish a Professional Digital Identity
 
 The website should make MERSI feel like a serious, organized, modern student organization rather than simply a social-media committee.
 
@@ -72,7 +72,7 @@ The website should make MERSI feel like a serious, organized, modern student org
 
 # 3. Target Users
 
-## Persona 1 — Prospective Student
+## Persona 1 , Prospective Student
 
 A high-school graduate or prospective student interested in studying Information Systems.
 
@@ -88,7 +88,7 @@ Determine whether SIFORS Undiksha feels like a good environment for them.
 
 ---
 
-## Persona 2 — Current SIFORS Student
+## Persona 2 , Current SIFORS Student
 
 A student who wants to participate in MERSI.
 
@@ -102,7 +102,7 @@ A student who wants to participate in MERSI.
 
 ---
 
-## Persona 3 — Department/Programme Stakeholder
+## Persona 3 , Department/Programme Stakeholder
 
 Lecturers or programme management who want to showcase the PR initiative.
 
@@ -155,7 +155,7 @@ Home
 ├── Teams
 │   ├── Copywriting
 │   ├── Creative Design
-│   └── QA/QC
+│   └── Social Media Talent
 │
 ├── Why Join?
 │
@@ -251,7 +251,7 @@ Draft copy:
 
 > MERSI SIFORS UNDIKSHA is a student PR team dedicated to supporting the Information Systems Study Programme through creative communication, digital content, and student recruitment campaigns.
 >
-> MERSI brings together students with different talents—from writing and visual design to content quality assurance—to create meaningful and engaging communication for the Information Systems community.
+> MERSI brings together students with different talents,from writing and visual design to social media performance,to create meaningful and engaging communication for the Information Systems community.
 
 **Important:** The exact official meaning of "MERSI" should be confirmed by the programme manager before publication. The AI agent must **not invent an acronym expansion**.
 
@@ -293,7 +293,7 @@ Introduce the three MERSI teams.
 
 ---
 
-## Team 1 — Copywriting
+## Team 1 , Copywriting
 
 ### Tagline
 
@@ -323,7 +323,7 @@ Responsible for developing written communication and storytelling for MERSI and 
 
 ---
 
-## Team 2 — Creative Design
+## Team 2 , Creative Design
 
 ### Tagline
 
@@ -354,33 +354,33 @@ Responsible for transforming ideas and information into engaging visual communic
 
 ---
 
-## Team 3 — QA/QC
+## Team 3 , Social Media Talent
 
 ### Tagline
 
-> **Every detail matters.**
+> **Bring our story to life.**
 
 ### Description
 
-Responsible for reviewing content before publication to ensure accuracy, consistency, and quality.
+Social Media Talents are the people who bring MERSI's content to life. They appear in videos, Reels, and other social media content to communicate ideas, share information, and engage with our audience.
 
 ### Responsibilities
 
-* Fact checking
-* Grammar checking
-* Information verification
-* Visual review
-* Branding consistency
-* CTA/link verification
-* Final content review
+* Appear in MERSI social media videos
+* Present information and promotional content
+* Participate in Reels and short-form video content
+* Collaborate with the Copywriting and Creative Design teams
+* Help create engaging and relatable content
+* Represent the image and personality of MERSI
 
 ### Skills
 
-* Attention to detail
-* Critical thinking
-* Communication
-* Quality assurance
-* Content review
+* Comfortable appearing on camera
+* Good communication skills
+* Confident or willing to become more confident on camera
+* Expressive and engaging personality
+* Willingness to participate in content production
+* Reliable and responsible
 
 ---
 
@@ -395,7 +395,7 @@ COPYWRITING
  ↓
 DESIGN
  ↓
-QA/QC
+SOCIAL MEDIA TALENT
  ↓
 APPROVAL
  ↓
@@ -424,7 +424,7 @@ This section should focus on **student benefits**, not organizational descriptio
 
 ### Experience
 
-> Gain hands-on experience in communication, design, content creation, and quality assurance.
+> Gain hands-on experience in communication, design, content creation, and social media.
 
 ### Collaboration
 
@@ -459,7 +459,7 @@ This is the **conversion section**.
 
 🎨 Creative Design
 
-🔍 QA/QC
+🎥 Social Media Talent
 ```
 
 ### Recruitment Information
@@ -594,7 +594,7 @@ Footer should contain:
 
 **MERSI SIFORS UNDIKSHA**
 
-> Student PR Team — Information Systems Study Programme
+> Student PR Team , Information Systems Study Programme
 
 Links:
 
@@ -810,7 +810,7 @@ The website should be optimized for searches related to:
 
 Title:
 
-> MERSI SIFORS UNDIKSHA — Create. Communicate. Represent.
+> MERSI SIFORS UNDIKSHA , Create. Communicate. Represent.
 
 Description:
 
@@ -962,8 +962,8 @@ const teams = [
     skills: []
   },
   {
-    name: "QA/QC",
-    tagline: "Every detail matters.",
+       name: "Social Media Talent",
+       tagline: "Bring our story to life.",
     description: "...",
     responsibilities: [],
     skills: []
@@ -1097,7 +1097,7 @@ The first version must contain:
 
 ---
 
-# 33. Out of Scope — V1
+# 33. Out of Scope , V1
 
 Do **not** implement:
 
@@ -1194,7 +1194,7 @@ I think **"Create. Communicate. Represent."** works particularly well for MERSI 
 
 **Create → Design**
 **Communicate → Copywriting**
-**Represent → QA/QC + the broader PR mission**
+**Represent → Social Media Talent + the broader PR mission**
 
 You can also make the recruitment CTA:
 

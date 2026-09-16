@@ -104,8 +104,8 @@ export function RecruitmentCountdown({ className }: RecruitmentCountdownProps) {
             >
               <span className="block text-lg font-extrabold tabular-nums text-text sm:text-xl">
                 {remaining ? (
-                  /* Keyed by value, so the digit re-mounts — and replays its
-                     tick animation — only when it actually changes. */
+                  /* Keyed by value, so the digit re-mounts , and replays its
+                     tick animation , only when it actually changes. */
                   <span
                     key={`${unit.key}-${remaining[unit.key]}`}
                     className="countdown-digit inline-block"

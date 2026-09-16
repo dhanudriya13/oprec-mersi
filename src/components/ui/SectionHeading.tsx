@@ -36,7 +36,7 @@ export function SectionHeading({
         {title}
       </h2>
       {/* A short gold rule that draws itself the first time the heading is
-          revealed — it gives every section the same small "opening" beat.
+          revealed , it gives every section the same small "opening" beat.
           Decorative, and hidden from assistive technology. */}
       <span
         className={cn(

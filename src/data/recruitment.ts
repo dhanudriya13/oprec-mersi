@@ -3,14 +3,13 @@ import type {
   RecruitmentProcessStep,
   RecruitmentStatus,
 } from "@/types";
-import { placeholders } from "./site";
 
 /**
  * ┌──────────────────────────────────────────────────────────────────────────┐
  * │  CENTRAL RECRUITMENT CONFIGURATION                                       │
  * │                                                                          │
  * │  This is the ONLY file that needs to change for each recruitment period.  │
- * │  Update `status`, the dates, `eligibility`, `contact`, and                 │
+ * │  Update `status`, the dates, `eligibility`, `contacts`, and                │
  * │  `applicationUrl` below, plus the stages in `recruitmentProcess`.          │
  * └──────────────────────────────────────────────────────────────────────────┘
  *
@@ -21,13 +20,13 @@ import { placeholders } from "./site";
  *   "closed"   → ⚪ RECRUITMENT CLOSED     → applications are closed
  *
  * The recruitment period, the deadline, the eligibility requirements, the
- * selection stages, the contact person, and the application URL below are
+ * selection stages, the contact people, and the application URL below are
  * official information supplied by the MERSI team. Everything still written as
  * `[...]` is a deliberate placeholder: per PRD section 31 the site must never
  * fabricate requirements or links, so replace those before publishing.
  *
  * `deadline` and `deadlineIso` describe the same moment and must be updated
- * together — the first is what visitors read, the second drives the live
+ * together , the first is what visitors read, the second drives the live
  * countdown.
  */
 export const recruitment = {
@@ -54,7 +53,7 @@ export const recruitment = {
   deadlineIso: "2026-09-30T23:59:00+08:00",
 
   /**
-   * Who is eligible to apply — one entry per requirement, rendered as a bullet
+   * Who is eligible to apply , one entry per requirement, rendered as a bullet
    * list. Kept as a list even for a single requirement, so the layout never
    * changes shape between recruitment periods.
    */
@@ -63,24 +62,30 @@ export const recruitment = {
     "Semester 1 or Semester 3",
   ],
 
-  /** e.g. "3 designers, 2 copywriters, 1 QA/QC" */
-  positionsAvailable: placeholders.positionsAvailable,
+  /** The three roles available in this recruitment period. */
+  positionsAvailable:
+    "3 roles: Copywriting, Creative Design, and Social Media Talent",
 
   /**
-   * Recruitment contact person. `whatsapp` is the official number in its
-   * display form (`+62 …`); `getWhatsAppUrl()` turns it into a `wa.me` link.
-   * Set it to `null` to remove the WhatsApp button again.
+   * Recruitment contacts. `whatsapp` is the official number in display form;
+   * `getWhatsAppUrl()` turns it into a `wa.me` link.
    */
-  contact: {
-    name: "Putu Dhanu Driya",
-    whatsapp: "+62 877-6295-1844",
-  } satisfies RecruitmentContact,
+  contacts: [
+    {
+      name: "Mahestra",
+      whatsapp: "+62 877-3033-9622",
+    },
+    {
+      name: "Anggi",
+      whatsapp: "+62 896-7043-1550",
+    },
+  ] satisfies RecruitmentContact[],
 
   /**
    * External recruitment form (official Google Form link).
    *
    * Can also be supplied / overridden at build time via the
-   * `NEXT_PUBLIC_APPLICATION_URL` environment variable — see `.env.example`.
+   * `NEXT_PUBLIC_APPLICATION_URL` environment variable , see `.env.example`.
    * Keep the public `…/viewform` link here (not the `?usp=publish-editor`
    * preview URL from the Google Forms editor).
    */

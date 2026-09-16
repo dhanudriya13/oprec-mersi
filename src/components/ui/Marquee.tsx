@@ -4,8 +4,8 @@ import { teams } from "@/data/teams";
 /**
  * Thin ticker band (PRD section 17: "occasional playful visual elements").
  *
- * It repeats the site's own vocabulary — the tagline, the three team names,
- * the study programme — so it adds rhythm to the page without introducing a
+ * It repeats the site's own vocabulary , the tagline, the three team names,
+ * the study programme , so it adds rhythm to the page without introducing a
  * single new claim. Purely decorative:
  *
  * - The whole band is `aria-hidden`, because every phrase in it already

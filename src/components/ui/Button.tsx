@@ -61,7 +61,7 @@ const base =
   "inline-flex select-none items-center justify-center rounded-full font-semibold tracking-[-0.01em] transition-[background-color,border-color,color,box-shadow,transform] duration-200 will-change-transform active:scale-[0.98] active:duration-75";
 
 /* A disabled CTA gets its own deliberate, inert treatment rather than simply
-   fading out, so it never looks like a rendering glitch — and never looks
+   fading out, so it never looks like a rendering glitch , and never looks
    clickable. */
 const disabledVariants: Record<Variant, string> = {
   primary: "border border-border bg-neutral-soft text-muted",

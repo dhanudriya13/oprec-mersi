@@ -29,7 +29,7 @@ export function RecruitmentProcess() {
 
             return (
               <li key={step.step} className="relative">
-                {/* The reveal wraps the whole row — number, connector, card —
+                {/* The reveal wraps the whole row , number, connector, card ,
                     so the timeline draws itself downward as the visitor
                     scrolls through the steps. */}
                 <Reveal

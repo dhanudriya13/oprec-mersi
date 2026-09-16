@@ -10,7 +10,7 @@ interface CardProps {
   highlighted?: boolean;
   /**
    * Tracks the pointer with a soft gold highlight. Defaults to `interactive`,
-   * because that is where the visitor already expects a reaction — set it
+   * because that is where the visitor already expects a reaction , set it
    * explicitly to add the effect to a static card, or to switch it off.
    */
   spotlight?: boolean;

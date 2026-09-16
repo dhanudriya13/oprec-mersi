@@ -101,7 +101,7 @@ export function Navbar() {
       )}
     >
       <div className="shell flex h-18 items-center justify-between gap-4">
-        {/* Wordmark — replace with [OFFICIAL LOGO] once supplied. */}
+        {/* Wordmark , replace with [OFFICIAL LOGO] once supplied. */}
         <a
           href="#top"
           className="group flex items-center gap-3 rounded-xl py-2"
@@ -203,8 +203,8 @@ export function Navbar() {
         </span>
       )}
 
-      {/* Mobile panel. It stays in the DOM so it can animate open and closed —
-          a `hidden` element cannot transition — and is marked `inert` while
+      {/* Mobile panel. It stays in the DOM so it can animate open and closed ,
+          a `hidden` element cannot transition , and is marked `inert` while
           collapsed, which keeps it out of the tab order and away from screen
           readers without a second source of truth. */}
       <div
@@ -247,7 +247,7 @@ export function Navbar() {
                   id="mobile-apply-note"
                   className="mt-3 text-center text-caption text-muted"
                 >
-                  {recruitmentState.emoji} {recruitmentState.label} —{" "}
+                  {recruitmentState.emoji} {recruitmentState.label} ,{" "}
                   {recruitmentState.message}
                 </p>
               )}

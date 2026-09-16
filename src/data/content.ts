@@ -1,6 +1,6 @@
 import type { Benefit, MissionValue, WorkflowStep } from "@/types";
 
-/** "What We Do" — the four MERSI values (PRD section 8). */
+/** "What We Do" , the four MERSI values (PRD section 8). */
 export const missionValues: MissionValue[] = [
   {
     id: "communicate",
@@ -30,17 +30,17 @@ export const missionValues: MissionValue[] = [
   },
 ];
 
-/** "From Idea to Impact" — the MERSI content workflow (PRD section 10). */
+/** "From Idea to Impact" , the MERSI content workflow (PRD section 10). */
 export const workflowSteps: WorkflowStep[] = [
   { id: "idea", label: "Idea", icon: "bulb" },
   { id: "copywriting", label: "Copywriting", icon: "pen" },
   { id: "design", label: "Design", icon: "palette" },
-  { id: "qa-qc", label: "QA/QC", icon: "search" },
+  { id: "social-media-talent", label: "Social Media Talent", icon: "person" },
   { id: "approval", label: "Approval", icon: "check" },
   { id: "publish", label: "Publish", icon: "send" },
 ];
 
-/** "Why Join MERSI?" — student benefits (PRD section 11). */
+/** "Why Join MERSI?" , student benefits (PRD section 11). */
 export const benefits: Benefit[] = [
   {
     id: "certificate",
@@ -60,7 +60,7 @@ export const benefits: Benefit[] = [
     id: "skills",
     title: "Develop New Skills",
     description:
-      "Improve your skills in copywriting, creative design, quality assurance, communication, teamwork, and content creation.",
+      "Improve your skills in copywriting, creative design, social media, communication, teamwork, and content creation.",
     icon: "sparkles",
   },
   {
@@ -94,12 +94,6 @@ export const about = {
   heading: "What is MERSI?",
   paragraphs: [
     "MERSI SIFORS UNDIKSHA is a student PR team dedicated to supporting the Information Systems Study Programme through creative communication, digital content, and student recruitment campaigns.",
-    "MERSI brings together students with different talents—from writing and visual design to content quality assurance—to create meaningful and engaging communication for the Information Systems community.",
+    "MERSI brings together students with different talents,from writing and visual design to social media performance,to create meaningful and engaging communication for the Information Systems community.",
   ],
-  /**
-   * The official meaning of the name "MERSI" has not been supplied yet.
-   * PRD section 7 explicitly forbids inventing an acronym expansion.
-   */
-  nameNote:
-    "The official meaning of the name “MERSI” is pending confirmation from the programme manager.",
 } as const;

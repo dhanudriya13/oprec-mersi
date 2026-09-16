@@ -2,7 +2,7 @@ import type { Team } from "@/types";
 
 /**
  * The three MERSI teams (PRD section 9).
- * Edit this file to update team copy — components read from here.
+ * Edit this file to update team copy , components read from here.
  */
 export const teams: Team[] = [
   {
@@ -57,28 +57,28 @@ export const teams: Team[] = [
     icon: "palette",
   },
   {
-    id: "qa-qc",
-    name: "QA/QC",
-    emoji: "🔍",
-    tagline: "Every detail matters.",
+    id: "social-media-talent",
+    name: "Social Media Talent",
+    emoji: "🎥",
+    tagline: "Bring our story to life.",
     description:
-      "Responsible for reviewing content before publication to ensure accuracy, consistency, and quality.",
+      "Social Media Talents are the people who bring MERSI's content to life. They appear in videos, Reels, and other social media content to communicate ideas, share information, and engage with our audience.",
     responsibilities: [
-      "Fact checking",
-      "Grammar checking",
-      "Information verification",
-      "Visual review",
-      "Branding consistency",
-      "CTA/link verification",
-      "Final content review",
+      "Appear in MERSI social media videos",
+      "Present information and promotional content",
+      "Participate in Reels and short-form video content",
+      "Collaborate with the Copywriting and Creative Design teams",
+      "Help create engaging and relatable content",
+      "Represent the image and personality of MERSI",
     ],
     skills: [
-      "Attention to detail",
-      "Critical thinking",
-      "Communication",
-      "Quality assurance",
-      "Content review",
+      "good communicator",
+      "camera comfortable",
+      "confident & willing to grow",
+      "expressive & engaging",
+      "Active Participant",
+      "Reliable & Responsible",
     ],
-    icon: "search",
+    icon: "person",
   },
 ];

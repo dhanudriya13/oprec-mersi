@@ -24,7 +24,7 @@ export function Teams() {
             eyebrow="Teams"
             id="teams-heading"
             title="Find Your Role"
-            description="Three teams, three ways to contribute. Pick the one that matches your strengths — or the one you want to build."
+            description="Three teams, three ways to contribute. Pick the one that matches your strengths , or the one you want to build."
           />
         </Reveal>
 
@@ -100,7 +100,7 @@ export function Teams() {
                     />
                     <span className="sr-only">
                       {" "}
-                      — jumps to the recruitment section
+                      , jumps to the recruitment section
                     </span>
                   </a>
                 </Card>

@@ -24,7 +24,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-              {site.shortDescription} — supporting the programme through
+              {site.shortDescription} , supporting the programme through
               creative communication, digital content, and student recruitment.
             </p>
             <p className="mt-4 text-sm font-semibold text-text">

@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   MERSI SIFORS UNDIKSHA — Design tokens
+   MERSI SIFORS UNDIKSHA , Design tokens
    --------------------------------------------------------------------------
    Brand palette: LIGHT GOLD on WHITE.
 
    ⚠️  PLACEHOLDER BRANDING
    Official SIFORS / Undiksha brand colours have NOT been supplied, so the
    values below are a starting palette. Per `prd.md` section 18 these tokens are
-   the single source of truth — swap the values (only the values) once the
+   the single source of truth , swap the values (only the values) once the
    official palette is provided.
 
    Contrast note: light gold is a pale hue, so it is split into five roles.
@@ -26,13 +26,13 @@
    ========================================================================== */
 
 @theme {
-  /* Brand — light gold */
+  /* Brand , light gold */
   --color-primary: #e5c363; /* main light gold surface */
   --color-primary-hover: #dab54e;
   --color-primary-edge: #b08a1e; /* outline gold (3.2:1 vs white) */
   --color-primary-display: #b08a1e; /* gold for LARGE display text only (3.2:1) */
   --color-primary-soft: #fdf8e6; /* pale gold wash */
-  --color-primary-ink: #8a6a11; /* gold text on white — AA, 5.1:1 */
+  --color-primary-ink: #8a6a11; /* gold text on white , AA, 5.1:1 */
   --color-primary-contrast: #1f1804; /* text placed on light gold */
 
   --color-secondary: #3f3a2c;
@@ -40,7 +40,7 @@
   --color-accent: #6b5c2e;
   --color-accent-soft: #f7f2e2;
 
-  /* Surfaces — white, with warm neutrals for depth */
+  /* Surfaces , white, with warm neutrals for depth */
   --color-background: #ffffff;
   --color-surface: #faf9f5;
   --color-surface-raised: #ffffff;
@@ -55,7 +55,7 @@
   --color-warning-soft: #fdece2;
   --color-neutral-soft: #f2efe6;
 
-  /* Radius scale — rounded, friendly, modern */
+  /* Radius scale , rounded, friendly, modern */
   --radius-card: 1.25rem;
 
   /* Typography scale (fluid where it matters) */
@@ -78,7 +78,7 @@
   --text-caption: 0.8125rem;
   --text-caption--line-height: 1.5;
 
-  /* Motion — see the "Motion" section further down for the matching
+  /* Motion , see the "Motion" section further down for the matching
      keyframes. Everything is CSS-only: no animation library, no extra
      JavaScript, and every one of these utilities is switched off inside
      `prefers-reduced-motion` at the bottom of this file. */
@@ -152,7 +152,7 @@
   }
 }
 
-/* `transform` only — these run behind text, so they must never trigger layout. */
+/* `transform` only , these run behind text, so they must never trigger layout. */
 @keyframes float {
   0%,
   100% {
@@ -257,7 +257,7 @@
 /* ==========================================================================
    Theme note
    --------------------------------------------------------------------------
-   The site ships a single light theme — a white background with gold accents,
+   The site ships a single light theme , a white background with gold accents,
    as specified. Because every colour is a token (`bg-background`,
    `text-muted`, …), adding a dark theme later only requires re-declaring the
    tokens on a `.dark` selector or inside a `prefers-color-scheme` media query
@@ -308,7 +308,7 @@
 }
 
 @layer components {
-  /* Horizontal page gutter — every section uses this for consistent rhythm. */
+  /* Horizontal page gutter , every section uses this for consistent rhythm. */
   .shell {
     width: 100%;
     max-width: 72rem;
@@ -328,7 +328,7 @@
     }
   }
 
-  /* Decorative "digital" backdrop — CSS only, no images to download.
+  /* Decorative "digital" backdrop , CSS only, no images to download.
      The gold wash is mixed at a higher percentage because the brand gold is
      deliberately pale. */
   .grid-backdrop {
@@ -355,7 +355,7 @@
 
   /* Scroll reveal (see components/ui/Reveal.tsx).
      Content is visible by default; the hidden state is only applied once the
-     component has confirmed — client-side — that JavaScript is running and the
+     component has confirmed , client-side , that JavaScript is running and the
      element is below the fold. Without JavaScript nothing is ever hidden.
 
      The `data-variant` variants let a section choose the direction it moves
@@ -391,7 +391,7 @@
   }
 
   /* Elements that "draw themselves" the first time their Reveal wrapper
-     becomes visible — the rule under a section heading, the vertical timeline
+     becomes visible , the rule under a section heading, the vertical timeline
      connector. Their default state is the finished state, so they are never
      missing for visitors without JavaScript. */
   .draw-x,
@@ -502,8 +502,8 @@
   }
 
   /* Gradient sweep across a single display word (the hero accent).
-     Both stops are accessible golds — gold ink (5.1:1) and gold display
-     (3.2:1) — so the word stays legible at every point of the sweep, rather
+     Both stops are accessible golds , gold ink (5.1:1) and gold display
+     (3.2:1) , so the word stays legible at every point of the sweep, rather
      than flashing a pale gold that would drop below the large-text threshold. */
   .text-shine {
     background-image: linear-gradient(

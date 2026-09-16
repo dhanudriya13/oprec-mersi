@@ -17,7 +17,7 @@ export function Benefits() {
             eyebrow="Why Join"
             id="benefits-heading"
             title="Why Join MERSI?"
-            description="MERSI is a place to build real skills and a real portfolio — not just a title on your student record."
+            description="MERSI is a place to build real skills and a real portfolio , not just a title on your student record."
           />
         </Reveal>
 

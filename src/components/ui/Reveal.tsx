@@ -11,7 +11,7 @@ interface RevealProps {
   /**
    * Where the element arrives from. `up` (default) suits stacked content,
    * `left`/`right` suit side panels, `scale` suits tiles and cards, and `fade`
-   * is for elements that already move on their own — e.g. an interactive card
+   * is for elements that already move on their own , e.g. an interactive card
    * whose hover lift would fight a second transform.
    *
    * The matching styles live in `globals.css` under `.reveal[data-variant]`.
@@ -58,7 +58,7 @@ function observeOnce(element: Element, onReveal: () => void) {
  *
  * Robustness & accessibility:
  * - The HTML always renders visible. The hidden state is only "armed" after
- *   mount, client-side, and only for elements that start below the fold — so
+ *   mount, client-side, and only for elements that start below the fold , so
  *   nothing is ever hidden from no-JS users and there is no flash of content.
  * - No React state is involved, which keeps this work off the render path.
  * - `prefers-reduced-motion: reduce` disables the effect (see globals.css).

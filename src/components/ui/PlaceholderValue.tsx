@@ -6,7 +6,7 @@ interface PlaceholderValueProps {
 }
 
 /**
- * Renders official content, or — while it is still missing — a clearly marked
+ * Renders official content, or , while it is still missing , a clearly marked
  * placeholder token such as `[APPLICATION URL]`.
  *
  * The distinction is never conveyed by colour alone: placeholder values keep

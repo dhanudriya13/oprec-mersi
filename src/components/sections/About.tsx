@@ -36,18 +36,6 @@ export function About() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-3xl border border-dashed border-border bg-surface p-5">
-            <p className="flex items-start gap-3 text-sm leading-relaxed text-muted">
-              <span className="mt-0.5 shrink-0 text-primary-ink" aria-hidden="true">
-                <Icon name="badge" className="size-5" />
-              </span>
-              <span>
-                <strong className="font-semibold text-text">Note: </strong>
-                {about.nameNote}
-              </span>
-            </p>
-          </div>
-
           <dl className="mt-8 grid gap-4 sm:grid-cols-3">
             <div>
               <dt className="text-caption font-bold tracking-[0.1em] text-muted uppercase">
@@ -116,7 +104,7 @@ export function About() {
             </ul>
 
             <p className="mt-5 text-sm leading-relaxed text-muted">
-              Each team owns a different part of the process — together they
+              Each team owns a different part of the process , together they
               take an idea all the way to publication.
             </p>
           </Card>

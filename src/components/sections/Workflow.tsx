@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { workflowSteps } from "@/data/content";
 
 /**
- * "From Idea to Impact" — the content workflow (PRD section 10).
+ * "From Idea to Impact" , the content workflow (PRD section 10).
  * Renders as a horizontal pipeline on desktop and a vertical one on mobile.
  */
 export function Workflow() {
@@ -51,7 +51,7 @@ export function Workflow() {
 
                   {index < lastIndex && (
                     <>
-                      {/* Desktop connector — drifts in the direction of the
+                      {/* Desktop connector , drifts in the direction of the
                           flow, so the row reads left to right. */}
                       <span
                         className="pointer-events-none absolute top-1/2 -right-1.5 hidden -translate-y-1/2 translate-x-1/2 text-muted lg:flex"

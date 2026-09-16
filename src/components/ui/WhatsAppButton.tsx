@@ -2,10 +2,10 @@
 
 import { Button } from "./Button";
 import { Icon } from "./Icon";
-import { recruitment } from "@/data/recruitment";
 import { getWhatsAppUrl } from "@/lib/recruitment";
 
 interface WhatsAppButtonProps {
+  phone: string | null;
   label?: string;
   size?: "sm" | "md" | "lg";
   variant?: "secondary" | "invertedOutline";
@@ -19,16 +19,17 @@ interface WhatsAppButtonProps {
  *
  * The number comes from the central recruitment config. While it is still a
  * `[CONTACT PERSON]` placeholder, `getWhatsAppUrl()` returns `null` and the
- * button is not rendered at all — the site never links to a chat that cannot
+ * button is not rendered at all , the site never links to a chat that cannot
  * open (PRD section 31).
  */
 export function WhatsAppButton({
+  phone,
   label = "Chat on WhatsApp",
   size = "sm",
   variant = "secondary",
   className,
 }: WhatsAppButtonProps) {
-  const href = getWhatsAppUrl(recruitment.contact.whatsapp);
+  const href = getWhatsAppUrl(phone);
   if (!href) return null;
 
   return (

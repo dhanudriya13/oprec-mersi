@@ -25,7 +25,7 @@ export function Recruitment() {
   /**
    * Recruitment details, in reading order. Plain values render through
    * `PlaceholderValue`; eligibility, the selection stages, and the contact
-   * person get structured renderings (bullet list, stage list, WhatsApp CTA).
+  * people get structured renderings (bullet list, stage list, WhatsApp CTAs).
    */
   const details: { label: string; icon: IconName; content: ReactNode }[] = [
     {
@@ -74,17 +74,26 @@ export function Recruitment() {
       label: "Recruitment contact",
       icon: "mail",
       content: (
-        <>
-          <PlaceholderValue value={state.contact.name} />
-          {isConfigured(state.contact.whatsapp) && (
-            <span className="mt-2.5 flex flex-wrap items-center gap-2">
-              <WhatsAppButton />
-              <span className="text-caption tabular-nums">
-                {state.contact.whatsapp}
+        <ul className="space-y-4">
+          {state.contacts.map((contact) => (
+            <li
+              key={contact.name}
+              className="flex flex-wrap items-center gap-2.5"
+            >
+              <span className="font-semibold text-text">
+                <PlaceholderValue value={contact.name} />
               </span>
-            </span>
-          )}
-        </>
+              {isConfigured(contact.whatsapp) && (
+                <span className="flex flex-wrap items-center gap-2">
+                  <WhatsAppButton phone={contact.whatsapp} />
+                  <span className="text-caption tabular-nums">
+                    {contact.whatsapp}
+                  </span>
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
       ),
     },
   ];
@@ -162,7 +171,8 @@ export function Recruitment() {
               </p>
             )}
 
-            {state.canApply && !isConfigured(state.contact.name) && (
+            {state.canApply &&
+              state.contacts.every((contact) => !isConfigured(contact.name)) && (
               <PendingNotice className="mt-4 max-w-md">
                 The recruitment contact will be published here once it has been
                 confirmed by the MERSI team.
@@ -204,7 +214,7 @@ export function Recruitment() {
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-text">
                 Complete the official MERSI recruitment form. Your application
-                is submitted outside this website — we never collect applicant
+                is submitted outside this website , we never collect applicant
                 data here.
               </p>
             </div>

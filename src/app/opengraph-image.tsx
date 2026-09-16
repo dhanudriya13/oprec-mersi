@@ -7,7 +7,7 @@ export const contentType = "image/png";
 
 /**
  * Branded social share card, generated at build time from the same tokens as
- * the site — so it never goes stale and costs no extra asset to maintain.
+ * the site , so it never goes stale and costs no extra asset to maintain.
  */
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -92,7 +92,7 @@ export default function OpengraphImage() {
           }}
         >
           <div style={{ display: "flex" }}>
-            Student PR Team — Information Systems Study Programme
+            Student PR Team , Information Systems Study Programme
           </div>
           <div style={{ display: "flex", fontWeight: 700, color: "#8a6a11" }}>
             Open Recruitment

@@ -17,7 +17,7 @@ interface BadgeProps {
   className?: string;
 }
 
-/** Small pill label — eyebrows, tags, and status indicators. */
+/** Small pill label , eyebrows, tags, and status indicators. */
 export function Badge({ children, tone = "primary", className }: BadgeProps) {
   return (
     <span

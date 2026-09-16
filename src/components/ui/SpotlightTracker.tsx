@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 /**
- * Pointer-tracked card highlights — the single piece of JavaScript behind
+ * Pointer-tracked card highlights , the single piece of JavaScript behind
  * `.card-spotlight` (see `globals.css`).
  *
  * One delegated `pointermove` listener serves every card on the page: it finds
@@ -13,7 +13,7 @@ import { useEffect } from "react";
  *
  * Notes:
  * - Updates are throttled to one per animation frame, and only the two custom
- *   properties change — no layout, no React re-render.
+ *   properties change , no layout, no React re-render.
  * - Touch and pen input is ignored: a highlight that only appears under a
  *   finger would never be seen, and would only cost work on mobile.
  * - The whole effect is skipped when the visitor asks for reduced motion.

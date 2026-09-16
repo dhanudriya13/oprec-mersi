@@ -4,7 +4,7 @@ import { seo, site } from "@/data/site";
 import "./globals.css";
 
 /**
- * Plus Jakarta Sans — a modern, geometric sans-serif, as recommended in
+ * Plus Jakarta Sans , a modern, geometric sans-serif, as recommended in
  * PRD section 19. Self-hosted and subset by `next/font`, so there is no
  * third-party request and no layout shift.
  */
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           Browser extensions and screen-recording tools inject attributes onto
           <body> (e.g. `screen_capture_injected="true"`) *after* the server
           HTML has been sent, which React otherwise reports as a hydration
-          mismatch. It suppresses that one element's own attribute diff — it is
+          mismatch. It suppresses that one element's own attribute diff , it is
           not a way to hide real mismatches, and it does not affect any child
           component. */}
       <body className="flex min-h-full flex-col" suppressHydrationWarning>

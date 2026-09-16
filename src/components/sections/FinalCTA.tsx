@@ -16,7 +16,7 @@ export function FinalCTA() {
       <div className="shell">
         <Reveal variant="scale">
           <div className="relative overflow-hidden rounded-[2rem] border border-primary-edge/40 bg-primary px-6 py-14 text-primary-contrast sm:px-12 sm:py-16 lg:px-16 lg:py-20">
-            {/* Decorative rings — CSS only, drifting slowly so the band feels
+            {/* Decorative rings , CSS only, drifting slowly so the band feels
                 alive without competing with the copy. */}
             <div
               className="animate-float-slow pointer-events-none absolute -top-24 -right-16 size-72 rounded-full border border-primary-contrast/20"

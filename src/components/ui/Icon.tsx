@@ -3,7 +3,7 @@ import type { IconName } from "@/types";
 import { cn } from "@/lib/utils";
 
 /**
- * Hand-built inline SVG icons — no icon library, no extra request, no
+ * Hand-built inline SVG icons , no icon library, no extra request, no
  * layout shift. Every icon inherits `currentColor` and is hidden from
  * assistive technology, because icons here are always decorative and paired
  * with a text label.

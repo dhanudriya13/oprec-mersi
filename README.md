@@ -1,4 +1,4 @@
-# MERSI SIFORS UNDIKSHA — Website
+# MERSI SIFORS UNDIKSHA , Website
 
 Student PR & recruitment landing page for **MERSI SIFORS UNDIKSHA**, the student PR team
 of the Information Systems Study Programme (SIFORS), Universitas Pendidikan Ganesha.
@@ -23,7 +23,7 @@ npm run lint     # eslint
 
 Per `prd.md` section 31, the site **must not invent institutional information**. Anything not
 supplied by the programme is rendered as a visible placeholder such as
-`[APPLICATION URL]` — dashed border, small caps, with a `title` explaining why — and is always
+`[APPLICATION URL]` , dashed border, small caps, with a `title` explaining why , and is always
 paired with a short explanatory note.
 
 Placeholders currently in the build:
@@ -32,8 +32,8 @@ Placeholders currently in the build:
 | --- | --- |
 | `[NUMBER OF POSITIONS]` | Recruitment details |
 
-The official values supplied by the MERSI team are already in place — recruitment period,
-deadline, eligibility, selection stages, contact person, and the Google Form application URL —
+The official values supplied by the MERSI team are already in place , recruitment period,
+deadline, eligibility, selection stages, contact person, and the Google Form application URL ,
 so the tokens `[RECRUITMENT PERIOD]`, `[RECRUITMENT DEADLINE]`, `[ELIGIBILITY REQUIREMENTS]`,
 `[SELECTION PROCESS]`, `[CONTACT PERSON]`, `[TIME COMMITMENT]` and `[APPLICATION URL]` remain in
 `src/data/site.ts` as the vocabulary for future recruitment periods, but are not rendered.
@@ -82,12 +82,12 @@ recruitment details card and the *How the Selection Works* timeline.
 
 | `status` | Shown | Apply button |
 | --- | --- | --- |
-| `"open"` | 🟢 OPEN RECRUITMENT | active — links to `applicationUrl` |
+| `"open"` | 🟢 OPEN RECRUITMENT | active , links to `applicationUrl` |
 | `"upcoming"` | 🟡 COMING SOON | replaced by a notice |
 | `"closed"` | ⚪ RECRUITMENT CLOSED | replaced by "applications are closed" |
 
 The button is only active when the status is `open` **and** a real URL is configured. Until
-then it renders as an inert, clearly-labelled button plus an explanatory note — so no visitor
+then it renders as an inert, clearly-labelled button plus an explanatory note , so no visitor
 is ever sent to a dead link.
 
 The application URL can also be supplied without touching code:
@@ -110,7 +110,7 @@ Because every colour and font is a token, re-branding means editing **values onl
   --color-primary-edge: #b08a1e;     /* deeper gold outline for definition */
   --color-primary-display: #b08a1e;  /* gold for large display type only */
   --color-primary-soft: #fdf8e6;     /* pale gold wash */
-  --color-primary-ink: #8a6a11;      /* gold text on white — meets WCAG AA */
+  --color-primary-ink: #8a6a11;      /* gold text on white , meets WCAG AA */
   --color-primary-contrast: #1f1804; /* text placed on light gold */
   --color-background: #ffffff;
   /* … */
@@ -121,14 +121,14 @@ Light gold is a pale hue, so it is intentionally split into five roles:
 
 | Token | Job |
 | --- | --- |
-| `--color-primary` | the main light gold — button fills, the closing CTA band, and the gold-washed *Mission* and *Recruitment* section backgrounds (`bg-primary/25`) |
+| `--color-primary` | the main light gold , button fills, the closing CTA band, and the gold-washed *Mission* and *Recruitment* section backgrounds (`bg-primary/25`) |
 | `--color-primary-edge` | a deeper gold used for 1px outlines and hover borders, so light gold buttons stay legible against white |
 | `--color-primary-display` | deeper gold used only for large display headings (e.g. the hero's "Communicate."), where WCAG allows a 3:1 ratio |
 | `--color-primary-ink` | gold used as *text and icons on white*, darkened to meet WCAG AA for normal text (5.1:1) |
 | `--color-primary-soft` | a barely-there gold wash for icon chips and highlighted cards |
 
 Everything sitting on a light gold surface uses dark `--color-primary-contrast` text (~10:1).
-If you change the gold, re-check all five together — a lighter or darker gold will need
+If you change the gold, re-check all five together , a lighter or darker gold will need
 `--color-primary-ink`, `--color-primary-edge` and `--color-primary-display` adjusted to stay
 readable. Note that **light gold cannot be used for normal-sized text on white** at any
 acceptable contrast, which is exactly why `--color-primary-ink` exists.
@@ -170,7 +170,7 @@ src/
 - Visible `:focus-visible` outline on every interactive element.
 - `prefers-reduced-motion: reduce` disables all transitions, scroll reveal, and smooth
   scrolling.
-- Scroll-reveal content is visible by default — the hidden state is only applied client-side,
+- Scroll-reveal content is visible by default , the hidden state is only applied client-side,
   and only below the fold, so nothing is hidden without JavaScript.
 - Status and placeholders are never communicated by colour alone (emoji, labels, dashed
   borders, and `sr-only` text all carry the meaning).
@@ -186,8 +186,8 @@ src/
 
 ## Performance
 
-- Fully static (prerendered) — no server runtime needed.
-- Self-hosted subset fonts via `next/font` — no third-party requests, no layout shift.
+- Fully static (prerendered) , no server runtime needed.
+- Self-hosted subset fonts via `next/font` , no third-party requests, no layout shift.
 - Zero icon/image libraries: icons are inline SVG, decorative art is pure CSS.
 - One shared `IntersectionObserver` for all scroll reveals.
 - Analytics is a ~2 KB privacy-conscious shim (`src/lib/analytics.ts`) with no cookies and no
@@ -198,7 +198,7 @@ src/
 `src/lib/analytics.ts` emits `page_view`, `hero_cta_click`, `team_section_view`,
 `recruitment_section_view`, `apply_now_click`, `whatsapp_click` and `instagram_click` to two
 integration points: `window.dataLayer` (for GTM) and a `mersi:analytics` `CustomEvent`. Wire up
-any provider by listening for that event — for example:
+any provider by listening for that event , for example:
 
 ```ts
 window.addEventListener("mersi:analytics", (event) => {
@@ -213,7 +213,7 @@ external recruitment form platform.
 
 ## Out of scope (V1)
 
-No login, applicant database, admin dashboard, payments, or CMS — the site is a presentation
+No login, applicant database, admin dashboard, payments, or CMS , the site is a presentation
 and recruitment funnel only. The application form stays external, so the website never
 collects personal data.
 

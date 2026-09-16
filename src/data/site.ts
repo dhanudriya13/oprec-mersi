@@ -17,7 +17,7 @@ export const site = {
   university: "Universitas Pendidikan Ganesha (Undiksha)",
   tagline: "Create. Communicate. Represent.",
   shortDescription:
-    "Student PR Team — Information Systems Study Programme",
+    "Student PR Team , Information Systems Study Programme",
   /**
    * Canonical production URL, used for canonical tags, `sitemap.xml`,
    * `robots.txt` and Open Graph URLs.
@@ -32,7 +32,7 @@ export const site = {
 } as const;
 
 export const seo = {
-  title: "MERSI SIFORS UNDIKSHA — Create. Communicate. Represent.",
+  title: "MERSI SIFORS UNDIKSHA , Create. Communicate. Represent.",
   description:
     "Discover MERSI SIFORS UNDIKSHA, the student PR team supporting the Information Systems Study Programme through creative communication, digital content, and student recruitment.",
   keywords: [
@@ -85,7 +85,6 @@ export const placeholders = {
   officialLogo: "[OFFICIAL LOGO]",
   brandColors: "[OFFICIAL BRAND COLORS]",
   recruitmentPeriod: "[RECRUITMENT PERIOD]",
-  positionsAvailable: "[NUMBER OF POSITIONS]",
   selectionProcess: "[SELECTION PROCESS]",
   timeCommitment: "[TIME COMMITMENT]",
 } as const;
