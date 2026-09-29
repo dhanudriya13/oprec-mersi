@@ -39,7 +39,7 @@ export const recruitment = {
   period: "2026/2027",
 
   /** Application deadline, as shown to visitors. */
-  deadline: "30 September 2026, 23:59 WITA",
+  deadline: "5 October 2026, 23:59 WITA",
 
   /**
    * The same deadline in machine-readable ISO 8601 form, used by the live
@@ -50,7 +50,7 @@ export const recruitment = {
    * for everyone. A value that cannot be parsed disables the countdown instead
    * of showing an invented date.
    */
-  deadlineIso: "2026-09-30T23:59:00+08:00",
+  deadlineIso: "2026-10-05T23:59:00+08:00",
 
   /**
    * Who is eligible to apply , one entry per requirement, rendered as a bullet
